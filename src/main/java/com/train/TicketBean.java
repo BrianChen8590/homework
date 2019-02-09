@@ -20,7 +20,7 @@ public class TicketBean {
             int singleCost = (ticketNum - ticketRoundNum) * SINGLE_FEE;
             double roundCost = ticketRoundNum * SINGLE_FEE * 2 * ROUND_OFF;
             int totalCost = singleCost + (int) roundCost;
-            return "Total tickets:" + ticketNum + "\nRound-trip:" + ticketRoundNum + "\nTotal: " + totalCost;
+            return "Total tickets:" + ticketNum + "\nRound-trip:" + ticketRoundNum + "\nTotal: " + totalCost + "\n";
         }
     }
 }

@@ -4,15 +4,25 @@ import java.util.*
 
 fun main(args: Array<String>) {
     var scanner = Scanner(System.`in`);
-    
-    print("Please enter number of tickets: ");
-    val ticketNum = scanner.nextInt();
 
-    print("How many round-trip tickets: ");
-    val ticketRoundNum = scanner.nextInt();
+    while (true){
+        println("Do you want to leave, please enter ( -1 ) : ");
+        print("Please enter number of tickets: ");
+        val ticketNum = scanner.nextInt();
+        if (ticketNum == -1) {
+            println("Leave order system");
+            break;
+        }
 
-    val ticketBean = TicketBean(ticketNum, ticketRoundNum);
-    println(ticketBean.printCost());
+        print("How many round-trip tickets: ");
+        val ticketRoundNum = scanner.nextInt();
+        if (ticketRoundNum == -1) {
+            println("Leave order system");
+            break;
+        }
+
+        println("${TicketBean(ticketNum, ticketRoundNum).printCost()}");
+    }
 }
 
 class TicketSale(var ticketNum: Int, var ticketRoundNum: Int) {
